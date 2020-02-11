@@ -39,6 +39,8 @@ using namespace arma;
 //' ## with penalty
 //' lambda_pen = c(6000,6000,16000,16000,16000)
 //' pt_pen = minEM(data, lambda_pen, ka=1, kb=2, tol = 1e-4, maxiter = 100)
+//' 
+//' @export
 //[[Rcpp::export]]
 const List minEM(const List data, const arma::vec lambda, const int ka, const int kb, const double tol=1e-4, int maxiter = 100)
 {

@@ -39,6 +39,8 @@ EM <- function(oldpara, data, lambda) {
 #' ## with penalty
 #' lambda_pen = c(6000,6000,16000,16000,16000)
 #' pt_pen = minEM(data, lambda_pen, ka=1, kb=2, tol = 1e-4, maxiter = 100)
+#' 
+#' @export
 minEM <- function(data, lambda, ka, kb, tol = 1e-4, maxiter = 100L) {
     .Call('_pairedfda_minEM', PACKAGE = 'pairedfda', data, lambda, ka, kb, tol, maxiter)
 }
