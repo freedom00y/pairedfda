@@ -3,6 +3,7 @@
 #' @param n number of subjects
 #'
 #' @return a list of 4 components including nobs, time, y and z
+#' @importFrom MASS mvrnorm
 #' @export
 #'
 #' @examples
