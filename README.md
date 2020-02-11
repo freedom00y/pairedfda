@@ -5,17 +5,18 @@ Joint Modeling for Paired Functional Data
 * Check the operating system version, clang (for MacOS) or gcc (for Windows) version and gfortran version. They should match with each other so that you can compile rpp in R.
 * Install devtools in R
 You need the R package "devtools" to install "pairedfda". Use the following command to check if you have installed "devtools"
-
+```r
 require("devtools")
-
+```
 If you do not have it, install using the following command
-
+```r
+library(devtools)
 install.packages("devtools")
-
+```
 * install rbpdfda in R:
-
+```r
 devtools::install_github("freedom00y/pairedfda")
-
+```
 ## Use pairedfda package:
 The following gives the description of each function in this package. The details can be found in the help documentation.
 
