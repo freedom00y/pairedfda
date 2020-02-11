@@ -13,7 +13,7 @@ If you do not have it, install using the following command
 library(devtools)
 install.packages("devtools")
 ```
-* install rbpdfda in R:
+* install pairedfda in R:
 ```r
 devtools::install_github("freedom00y/pairedfda")
 ```
