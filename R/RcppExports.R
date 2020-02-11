@@ -2,7 +2,7 @@
 # Generator token: 10BE3573-1514-4C36-9D1C-5A225CD40393
 
 EM <- function(oldpara, data, lambda) {
-    .Call('_pairedfda_EM', PACKAGE = 'pairedfda', oldpara, data, lambda)
+    .Call(`_pairedfda_EM`, oldpara, data, lambda)
 }
 
 #' Estimations
@@ -42,14 +42,14 @@ EM <- function(oldpara, data, lambda) {
 #' 
 #' @export
 minEM <- function(data, lambda, ka, kb, tol = 1e-4, maxiter = 100L) {
-    .Call('_pairedfda_minEM', PACKAGE = 'pairedfda', data, lambda, ka, kb, tol, maxiter)
+    .Call(`_pairedfda_minEM`, data, lambda, ka, kb, tol, maxiter)
 }
 
 loglike <- function(data, para) {
-    .Call('_pairedfda_loglike', PACKAGE = 'pairedfda', data, para)
+    .Call(`_pairedfda_loglike`, data, para)
 }
 
 orth_algo <- function(Th, V) {
-    .Call('_pairedfda_orth_algo', PACKAGE = 'pairedfda', Th, V)
+    .Call(`_pairedfda_orth_algo`, Th, V)
 }
 
