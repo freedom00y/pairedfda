@@ -6,7 +6,7 @@
 #' @param time A vector records the observation time of all subjects
 #' @param y A vector records first response variable of all subjects
 #' @param z A vector records second response variable of all subjects
-#' @param knots The full set of knots used to define the basis functions. It can be a number or a vector. If it is a number, the knots = seq(0,1,1/nknots); if it is a vector, knots is this vector.
+#' @param knots The full set of knots used to define the basis functions. It can be a number or a vector. If it is a number, the knots = seq(0,1,1/knots); if it is a vector, knots is this vector.
 #' @param order Order of bsplines
 #'
 #' @return 
@@ -30,7 +30,7 @@
 #' sumobs = sum(nobs)
 #' y = rnorm(sumobs,0,1.5)
 #' z = rnorm(sumobs,1,1)
-#' data = predata(nobs,time,y,z,nknots = 8,order=3)
+#' data = predata(nobs,time,y,z,knots = 8,order=3)
 #' 
 #' @examples  
 #' rawdata = gen_data(n=50)

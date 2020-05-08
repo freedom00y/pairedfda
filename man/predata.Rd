@@ -15,7 +15,7 @@ predata(nobs, time, y, z, knots = 8, order = 3)
 
 \item{z}{A vector records second response variable of all subjects}
 
-\item{knots}{The full set of knots used to define the basis functions. It can be a number or a vector. If it is a number, the knots = seq(0,1,1/nknots); if it is a vector, knots is this vector.}
+\item{knots}{The full set of knots used to define the basis functions. It can be a number or a vector. If it is a number, the knots = seq(0,1,1/knots); if it is a vector, knots is this vector.}
 
 \item{order}{Order of bsplines}
 }
@@ -45,7 +45,7 @@ for(i in 1:n)
 sumobs = sum(nobs)
 y = rnorm(sumobs,0,1.5)
 z = rnorm(sumobs,1,1)
-data = predata(nobs,time,y,z,nknots = 8,order=3)
+data = predata(nobs,time,y,z,knots = 8,order=3)
 
  
 rawdata = gen_data(n=50)

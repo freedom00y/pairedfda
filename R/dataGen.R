@@ -2,7 +2,7 @@
 #' @description Generate the simulation data described in the paper.
 #' @param n number of subjects
 #'
-#' @return a list of 4 components including nobs, time, y and z
+#' @return a list of 4 components including nobs, time, y and z. The meaning of the 4 parameters can be found from \code{\link{predata}}.
 #' @importFrom MASS mvrnorm
 #' @export
 #'

@@ -30,13 +30,10 @@ Use this function to estimate parameters set
 \details{
 We suppose the model is 
 \deqn{Y_i = B_i \theta_\mu + B_i f \alpha_i + \epsilon_i, Z_i = B_i \theta_\nu + B_i g \beta_i + \xi_i,}
-where \eqn{(\alpha_i, \beta_i)} and residuals follow normal, t or slash distribution. We denote that 
-\deqn{(\alpha_i, \beta_i)|u_i \sim N(0,\Sigma_{\alpha\beta}/u_i), \epsilon_i|u_i\sim N(0,\sigma_\epsilon^2/u_i), \xi_i|u_i\sim N(0,\sigma_\xi^2/u_i), u_i\sim H(\gamma).}
-If \eqn{(\alpha_i, \beta_i)} and residuals follow normal, it means \eqn{H(\gamma)=1} all the time; 
-if \eqn{(\alpha_i, \beta_i)} and residuals follow t distribution, it means \eqn{H(\gamma)} is the distribution \eqn{\Gamma(\gamma/2,\gamma/2)};
-if \eqn{(\alpha_i, \beta_i)} and residuals follow slash distribution, it means \eqn{H(\gamma)} is the distribution \eqn{\beta(\gamma,1)},
-where \eqn{\Sigma_{\alpha\beta} = (D_a & C\\C^T & Db)}.
-This function returns the estimation of \eqn{\sigma^2_\epsilon,\sigma^2_\xi,\theta_\mu,\theta_\nu,\theta_f,\theta_g,Da,Db,C}, the degree of freedom \eqn{\gamma}.
+where \eqn{(\alpha_i, \beta_i)} and residuals follow normal distribution. We denote that 
+\deqn{(\alpha_i, \beta_i) \sim N(0,\Sigma_{\alpha\beta}), \epsilon_i\sim N(0,\sigma_\epsilon^2), \xi_i\sim N(0,\sigma_\xi^2),}
+and \eqn{\Sigma_{\alpha\beta} = (D_a & C\\C^T & Db)}.
+This function returns the estimation of \eqn{\sigma^2_\epsilon,\sigma^2_\xi,\theta_\mu,\theta_\nu,\theta_f,\theta_g,Da,Db,C}.
 }
 \examples{
 rawdata = gen_data(n=50)
@@ -48,4 +45,5 @@ pt_nopen = minEM(data, lambda, ka=1, kb=2, tol = 1e-4, maxiter = 100)
 ## with penalty
 lambda_pen = c(6000,6000,16000,16000,16000)
 pt_pen = minEM(data, lambda_pen, ka=1, kb=2, tol = 1e-4, maxiter = 100)
+
 }

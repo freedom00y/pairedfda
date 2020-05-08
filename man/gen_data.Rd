@@ -10,7 +10,7 @@ gen_data(n)
 \item{n}{number of subjects}
 }
 \value{
-a list of 4 components including nobs, time, y and z
+a list of 4 components including nobs, time, y and z. The meaning of the 4 parameters can be found from \code{\link{predata}}.
 }
 \description{
 Generate the simulation data described in the paper.
