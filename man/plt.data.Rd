@@ -13,5 +13,13 @@ plt.data(data)
 display two plots of the paired raw data
 }
 \examples{
+rawdata = gen_data(n=50)
+visit = seq(0,100,20)
+data = predata(nobs = rawdata$nobs, 
+               time = rawdata$time,  
+               y = rawdata$y, 
+               z = rawdata$z, 
+               knots = visit, 
+               order = 3)
 plt.data(data)
 }

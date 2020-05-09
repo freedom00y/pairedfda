@@ -3,7 +3,7 @@
 #' @param n number of subjects
 #'
 #' @return a list of 4 components including nobs, time, y and z. The meaning of the 4 parameters can be found from \code{\link{predata}}.
-#' @importFrom MASS mvrnorm
+#' @importFrom MASS mvrnorm stats
 #' @export
 #'
 #' @examples

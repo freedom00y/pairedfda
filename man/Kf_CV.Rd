@@ -27,7 +27,12 @@ and take the rest one as the testing dataset. Return mean square error (MSE).
 \examples{
 rawdata = gen_data(n=50)
 visit = seq(0,100,20)
-data = predata(nobs = rawdata$nobs, time = rawdata$time, y = rawdata$y, z = rawdata$z, knots = visit, order = 3)
+data = predata(nobs = rawdata$nobs, 
+               time = rawdata$time, 
+               y = rawdata$y, 
+               z = rawdata$z, 
+               knots = visit, 
+               order = 3)
 MSE = matrix(nrow=5,ncol=5)
 for(i in 1:5)
   for(j in 1:5)

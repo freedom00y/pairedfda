@@ -12,7 +12,6 @@ using namespace arma;
 //' @param data Processed data. Use "predata" to preprocess the raw data first.
 //' @param lambda Tuning parameter, a vector with 4 components. The tuning parameters shows as the following order, the first mean curve \eqn{(\lambda_\mu)}, the second mean curve \eqn{(\lambda_\nu)}, the first pcs \eqn{(\lambda_f)}, the second pcs \eqn{(\lambda_g)}.
 //' @param tol Tolerance of the EM algorithm
-//' @param type Model type. 'n' means normal; 't' means student-t; 's' means slash.
 //' @param ka Number of pcs for the first reponse variable
 //' @param kb Number of pcs for the second reponse variable
 //' @param maxiter Maximum iteration time, the default is 100 times
@@ -29,7 +28,12 @@ using namespace arma;
 //' @examples 
 //' rawdata = gen_data(n=50)
 //' visit = seq(0,100,20)
-//' data = predata(nobs = rawdata$nobs, time = rawdata$time, y = rawdata$y, z = rawdata$z, knots = visit, order = 3)
+//' data = predata(nobs = rawdata$nobs, 
+//'                time = rawdata$time,  
+//'                y = rawdata$y, 
+//'                z = rawdata$z, 
+//'                knots = visit, 
+//'                order = 3)
 //' ## without penalty
 //' lambda = c(0,0,0,0)
 //' pt_nopen = minEM(data, lambda, ka=1, kb=2, tol = 1e-4, maxiter = 100)

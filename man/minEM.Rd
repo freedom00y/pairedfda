@@ -18,8 +18,6 @@ minEM(data, lambda, ka, kb, tol = 1e-04, maxiter = 100L)
 \item{tol}{Tolerance of the EM algorithm}
 
 \item{maxiter}{Maximum iteration time, the default is 100 times}
-
-\item{type}{Model type. 'n' means normal; 't' means student-t; 's' means slash.}
 }
 \value{
 the estimation of the parameters
@@ -38,7 +36,12 @@ This function returns the estimation of \eqn{\sigma^2_\epsilon,\sigma^2_\xi,\the
 \examples{
 rawdata = gen_data(n=50)
 visit = seq(0,100,20)
-data = predata(nobs = rawdata$nobs, time = rawdata$time, y = rawdata$y, z = rawdata$z, knots = visit, order = 3)
+data = predata(nobs = rawdata$nobs, 
+               time = rawdata$time,  
+               y = rawdata$y, 
+               z = rawdata$z, 
+               knots = visit, 
+               order = 3)
 ## without penalty
 lambda = c(0,0,0,0)
 pt_nopen = minEM(data, lambda, ka=1, kb=2, tol = 1e-4, maxiter = 100)
