@@ -5,7 +5,7 @@ Version: 1.0
 Author: Lan Zhou, Huiya Zhou <huiya@stat.tamu.edu>
 Maintainer: Huiya Zhou <huiya@stat.tamu.edu>
 Description: This package focuses on the paired functional data analysis. Fit paired data to joint functional data models. 
-License: GNU GPLv3
+License: GPL-3
 Imports: Rcpp (>= 1.0.3), orthogonalsplinebasis, MASS
 LinkingTo: Rcpp, RcppArmadillo
 RoxygenNote: 7.0.2

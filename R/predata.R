@@ -47,8 +47,7 @@ predata <- function(nobs,time,y,z,knots = 8, order =3)
   nsum = sum(nobs)
   if(length(y)!=nsum | length(z)!=nsum | length(time)!=nsum )
   {
-    print("The obs times and the length of data don't match!")
-    break
+    stop("The obs times and the length of data don't match!")
   }
   n = length(nobs)
   ind = rep(1:n-1,nobs)
