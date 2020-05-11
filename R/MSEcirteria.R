@@ -1,3 +1,8 @@
+#' Evaluate the MSE 
+#' @param data preprocessed data
+#' @param para parameter set
+#' @return MSE 
+#' @keywords internal
 MSE <- function(data,para)
 {
   ## Load dataset

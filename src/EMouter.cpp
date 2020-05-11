@@ -1,6 +1,6 @@
 #include <RcppArmadillo.h>
-#include "EMinner.hpp"
-#include "loglike.hpp"
+#include "EMinner.h"
+#include "loglike.h"
 
 using namespace Rcpp;
 using namespace arma;
@@ -22,7 +22,7 @@ using namespace arma;
 //' \deqn{Y_i = B_i \theta_\mu + B_i f \alpha_i + \epsilon_i, Z_i = B_i \theta_\nu + B_i g \beta_i + \xi_i,}
 //' where \eqn{(\alpha_i, \beta_i)} and residuals follow normal distribution. We denote that 
 //' \deqn{(\alpha_i, \beta_i) \sim N(0,\Sigma_{\alpha\beta}), \epsilon_i\sim N(0,\sigma_\epsilon^2), \xi_i\sim N(0,\sigma_\xi^2),}
-//' and \eqn{\Sigma_{\alpha\beta} = (D_a & C\\C^T & Db)}.
+//' and \eqn{\Sigma_{\alpha\beta} = (D_a , C ; C^T , Db)}.
 //' This function returns the estimation of \eqn{\sigma^2_\epsilon,\sigma^2_\xi,\theta_\mu,\theta_\nu,\theta_f,\theta_g,Da,Db,C}.
 //' 
 //' @examples 
@@ -81,7 +81,7 @@ const List minEM(const List data, const arma::vec lambda, const int ka, const in
   
   int iter = 1;
   llv(iter) = value1;
-  while( iter < maxiter-1 & fabs(differ)>tol)
+  while( (iter < (maxiter-1)) & (fabs(differ)>tol))
   {
     para0  = para1;
     value0 = value1;
