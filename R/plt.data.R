@@ -3,7 +3,7 @@
 #' @param data Processed data. Use "predata" to preprocess the raw data first.
 #'
 #' @importFrom grDevices graphics
-#' 
+#' @export
 #' @examples
 #' rawdata = gen_data(n=50)
 #' visit = seq(0,100,20)
@@ -20,6 +20,7 @@ plt.data <- function(data)
   nobs = data$obs_times
   ind = c(0,cumsum(nobs))
   color = rainbow(n)
+  opar = par(no.readonly=TRUE)
   par(mfrow=c(1,2))
   t = data$dataset[,2]
   y = data$dataset[,3]
@@ -40,5 +41,5 @@ plt.data <- function(data)
     indrange = (ind[i]+1):ind[i+1]
     lines(t[indrange],z[indrange],'l',col=color[i])
   }
-  par(mfrow=c(1,1))
+  on.exit(par(opar))
 }
